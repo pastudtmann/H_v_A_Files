@@ -1,0 +1,2100 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     83603,       2092]
+NotebookOptionsPosition[     82329,       2067]
+NotebookOutlinePosition[     82726,       2083]
+CellTagsIndexPosition[     82683,       2080]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"k", ",", 
+     RowBox[{"2", "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{"R", ">", "P", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"1", "/", "3"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"R", "\[Conditioned]", 
+              RowBox[{"R", ">", "P", ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"P", "\[Conditioned]", 
+              RowBox[{"R", ">", "P", ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{
+              FractionBox[
+               RowBox[{
+                RowBox[{"4", " ", "P", " ", "R"}], "-", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"S", "+", "T"}], ")"}], "2"], "+", 
+                RowBox[{
+                 SuperscriptBox["k", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"4", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["P", "2"], "-", 
+                    RowBox[{"P", " ", "R"}], "+", 
+                    SuperscriptBox["R", "2"]}], ")"}]}], "-", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}], "+", 
+                RowBox[{"2", " ", "k", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "4"}], " ", "P", " ", "R"}], "+", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}]}], 
+               RowBox[{"4", " ", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", "k"}], ")"}], "2"], " ", 
+                RowBox[{"(", 
+                 RowBox[{"P", "+", "R", "-", "S", "-", "T"}], ")"}]}]], 
+              "\[Conditioned]", 
+              RowBox[{"R", ">", "P", ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{"R", ">", "P", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"1", "/", "3"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"R", "\[Conditioned]", 
+              RowBox[{"R", ">", "P", ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", "\[IndentingNewLine]", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"P", "\[Conditioned]", 
+              RowBox[{"R", ">", "P", ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{
+              FractionBox[
+               RowBox[{
+                RowBox[{"4", " ", "P", " ", "R"}], "-", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"S", "+", "T"}], ")"}], "2"], "+", 
+                RowBox[{
+                 SuperscriptBox["k", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"4", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["P", "2"], "-", 
+                    RowBox[{"P", " ", "R"}], "+", 
+                    SuperscriptBox["R", "2"]}], ")"}]}], "-", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}], "+", 
+                RowBox[{"2", " ", "k", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "4"}], " ", "P", " ", "R"}], "+", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}]}], 
+               RowBox[{"4", " ", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", "k"}], ")"}], "2"], " ", 
+                RowBox[{"(", 
+                 RowBox[{"P", "+", "R", "-", "S", "-", "T"}], ")"}]}]], 
+              "\[Conditioned]", 
+              RowBox[{"R", ">", "P", ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{"R", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"1", "/", "3"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"R", "\[Conditioned]", 
+              RowBox[{"R", ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P", 
+               ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", "\[IndentingNewLine]", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"P", "\[Conditioned]", 
+              RowBox[{"R", ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P", 
+               ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{
+              FractionBox[
+               RowBox[{
+                RowBox[{"4", " ", "P", " ", "R"}], "-", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"S", "+", "T"}], ")"}], "2"], "+", 
+                RowBox[{
+                 SuperscriptBox["k", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"4", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["P", "2"], "-", 
+                    RowBox[{"P", " ", "R"}], "+", 
+                    SuperscriptBox["R", "2"]}], ")"}]}], "-", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}], "+", 
+                RowBox[{"2", " ", "k", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "4"}], " ", "P", " ", "R"}], "+", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}]}], 
+               RowBox[{"4", " ", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", "k"}], ")"}], "2"], " ", 
+                RowBox[{"(", 
+                 RowBox[{"P", "+", "R", "-", "S", "-", "T"}], ")"}]}]], 
+              "\[Conditioned]", 
+              RowBox[{"R", ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P", 
+               ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{"R", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"NExpectation", "[", 
+          RowBox[{
+           RowBox[{"R", "\[Conditioned]", 
+            RowBox[{"R", ">", 
+             RowBox[{
+              RowBox[{"k", "*", "P"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+             RowBox[{
+              RowBox[{"k", "*", "R"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P"}]}],
+            ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{"R", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"NExpectation", "[", 
+          RowBox[{
+           RowBox[{"R", "\[Conditioned]", 
+            RowBox[{"R", ">", 
+             RowBox[{
+              RowBox[{"k", "*", "R"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P", 
+             ">", 
+             RowBox[{
+              RowBox[{"k", "*", "P"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{"R", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"NExpectation", "[", 
+          RowBox[{
+           RowBox[{"R", "\[Conditioned]", 
+            RowBox[{"R", ">", 
+             RowBox[{
+              RowBox[{"k", "*", "R"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+             RowBox[{
+              RowBox[{"k", "*", "P"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P"}]}],
+            ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"1", "/", "3"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"T", "\[Conditioned]", " ", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+               ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               "P"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", "\[IndentingNewLine]", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"S", "\[Conditioned]", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+               ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               "P"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{
+              FractionBox[
+               RowBox[{
+                RowBox[{"4", " ", "P", " ", "R"}], "-", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"S", "+", "T"}], ")"}], "2"], "+", 
+                RowBox[{
+                 SuperscriptBox["k", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"4", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["P", "2"], "-", 
+                    RowBox[{"P", " ", "R"}], "+", 
+                    SuperscriptBox["R", "2"]}], ")"}]}], "-", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}], "+", 
+                RowBox[{"2", " ", "k", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "4"}], " ", "P", " ", "R"}], "+", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}]}], 
+               RowBox[{"4", " ", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", "k"}], ")"}], "2"], " ", 
+                RowBox[{"(", 
+                 RowBox[{"P", "+", "R", "-", "S", "-", "T"}], ")"}]}]], 
+              "\[Conditioned]", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+               ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               "P"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", ">",
+             "P", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"NExpectation", "[", 
+          RowBox[{
+           RowBox[{"P", "\[Conditioned]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"k", "*", "P"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+             ">", "P", ">", 
+             RowBox[{
+              RowBox[{"k", "*", "R"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", ">",
+             "P"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"1", "/", "3"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"T", "\[Conditioned]", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+               ">", "P"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", "\[IndentingNewLine]", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"S", "\[Conditioned]", " ", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+               ">", "P"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{
+              FractionBox[
+               RowBox[{
+                RowBox[{"4", " ", "P", " ", "R"}], "-", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"S", "+", "T"}], ")"}], "2"], "+", 
+                RowBox[{
+                 SuperscriptBox["k", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"4", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["P", "2"], "-", 
+                    RowBox[{"P", " ", "R"}], "+", 
+                    SuperscriptBox["R", "2"]}], ")"}]}], "-", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}], "+", 
+                RowBox[{"2", " ", "k", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "4"}], " ", "P", " ", "R"}], "+", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}]}], 
+               RowBox[{"4", " ", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", "k"}], ")"}], "2"], " ", 
+                RowBox[{"(", 
+                 RowBox[{"P", "+", "R", "-", "S", "-", "T"}], ")"}]}]], 
+              "\[Conditioned]", " ", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+               ">", "P"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", ">",
+             "P"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"1", "/", "3"}], "*", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"T", "\[Conditioned]", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+               ">", "P"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", "\[IndentingNewLine]", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{"S", "\[Conditioned]", " ", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+               ">", "P"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}], "+", 
+           RowBox[{"NExpectation", "[", 
+            RowBox[{
+             RowBox[{
+              FractionBox[
+               RowBox[{
+                RowBox[{"4", " ", "P", " ", "R"}], "-", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{"S", "+", "T"}], ")"}], "2"], "+", 
+                RowBox[{
+                 SuperscriptBox["k", "2"], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"4", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["P", "2"], "-", 
+                    RowBox[{"P", " ", "R"}], "+", 
+                    SuperscriptBox["R", "2"]}], ")"}]}], "-", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}], "+", 
+                RowBox[{"2", " ", "k", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "4"}], " ", "P", " ", "R"}], "+", 
+                   SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"S", "+", "T"}], ")"}], "2"]}], ")"}]}]}], 
+               RowBox[{"4", " ", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", "k"}], ")"}], "2"], " ", 
+                RowBox[{"(", 
+                 RowBox[{"P", "+", "R", "-", "S", "-", "T"}], ")"}]}]], 
+              "\[Conditioned]", " ", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"k", "*", "R"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", 
+               RowBox[{
+                RowBox[{"k", "*", "P"}], "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", "k"}], ")"}], "*", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+               ">", "P"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"T", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"R", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"P", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+               RowBox[{"S", "\[Distributed]", 
+                RowBox[{"UniformDistribution", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+            "]"}]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"NExpectation", "[", 
+          RowBox[{
+           RowBox[{"R", "\[Conditioned]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"k", "*", "R"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+             ">", 
+             RowBox[{
+              RowBox[{"k", "*", "P"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "P"}]}],
+            ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}]}], "+", 
+        RowBox[{
+         RowBox[{"Probability", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"k", "*", "R"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", ">",
+             "P", ">", 
+            RowBox[{
+             RowBox[{"k", "*", "P"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", "k"}], ")"}], "*", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}], "*", 
+         RowBox[{"NExpectation", "[", 
+          RowBox[{
+           RowBox[{"R", "\[Conditioned]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"k", "*", "R"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}], ">", "R", 
+             ">", "P", ">", 
+             RowBox[{
+              RowBox[{"k", "*", "P"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "k"}], ")"}], "*", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"T", "+", "S"}], ")"}], "/", "2"}]}]}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"T", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"R", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"P", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}], ",", 
+             RowBox[{"S", "\[Distributed]", 
+              RowBox[{"UniformDistribution", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}], "]"}]}]}], "}"}]}], 
+          "]"}]}]}], ")"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", ".02", ",", ".98", ",", ".02"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.941542129095313*^9, 3.941542132353949*^9}},
+ CellLabel->
+  "In[221]:=",ExpressionUUID->"dfcbe53a-0ac5-430c-90db-16a3efd28645"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NExpectation", "input", "\"Invalid input.\"", 2, 221, 198, 
+   33295390584460554967, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.941542152264377*^9},
+ CellLabel->
+  "During evaluation of \
+In[221]:=",ExpressionUUID->"5a623cbb-4512-4812-8dca-fc2765fe3f2d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NExpectation", "input", "\"Invalid input.\"", 2, 221, 199, 
+   33295390584460554967, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9415421529797077`*^9},
+ CellLabel->
+  "During evaluation of \
+In[221]:=",ExpressionUUID->"f9aa8f3f-2d2e-4819-8db7-5d2f4fc71148"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NExpectation", "input", "\"Invalid input.\"", 2, 221, 200, 
+   33295390584460554967, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.941542153689327*^9},
+ CellLabel->
+  "During evaluation of \
+In[221]:=",ExpressionUUID->"a8b46ff1-311b-43d1-a29e-9735a525e291"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NExpectation\\\", \
+\\\"::\\\", \\\"input\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 221, 201, 33295390584460554967, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.941542153693589*^9},
+ CellLabel->
+  "During evaluation of \
+In[221]:=",ExpressionUUID->"bdfd5cb3-8a68-498a-a12d-1aaeeb7f0dda"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "eincr", 
+   "\"The global error of the strategy GlobalAdaptive has increased more than \
+\\!\\(\\*RowBox[{\\\"2000\\\"}]\\) times. The global error is expected to \
+decrease monotonically after a number of integrand evaluations. Suspect one \
+of the following: the working precision is insufficient for the specified \
+precision goal; the integrand is highly oscillatory or it is not a \
+(piecewise) smooth function; or the true value of the integral is 0. \
+Increasing the value of the GlobalAdaptive option MaxErrorIncreases might \
+lead to a convergent numerical integration. NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"-\\\", \\\"0.0012380538868573875`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"3.4428086535222024`*^-8\\\"}]\\) for the integral and \
+error estimates.\"", 2, 221, 202, 33295390584460554967, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.941542379414927*^9},
+ CellLabel->
+  "During evaluation of \
+In[221]:=",ExpressionUUID->"b4fb210d-30d5-4f5e-b3b7-c027be2913d6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "eincr", 
+   "\"The global error of the strategy GlobalAdaptive has increased more than \
+\\!\\(\\*RowBox[{\\\"2000\\\"}]\\) times. The global error is expected to \
+decrease monotonically after a number of integrand evaluations. Suspect one \
+of the following: the working precision is insufficient for the specified \
+precision goal; the integrand is highly oscillatory or it is not a \
+(piecewise) smooth function; or the true value of the integral is 0. \
+Increasing the value of the GlobalAdaptive option MaxErrorIncreases might \
+lead to a convergent numerical integration. NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"0.001238049386805892`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"3.895898779584279`*^-9\\\"}]\\) for the integral and \
+error estimates.\"", 2, 221, 203, 33295390584460554967, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.941542431976602*^9},
+ CellLabel->
+  "During evaluation of \
+In[221]:=",ExpressionUUID->"bb307d54-f999-437a-b791-9ef224c915e9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NIntegrate", "eincr", 
+   "\"The global error of the strategy GlobalAdaptive has increased more than \
+\\!\\(\\*RowBox[{\\\"2000\\\"}]\\) times. The global error is expected to \
+decrease monotonically after a number of integrand evaluations. Suspect one \
+of the following: the working precision is insufficient for the specified \
+precision goal; the integrand is highly oscillatory or it is not a \
+(piecewise) smooth function; or the true value of the integral is 0. \
+Increasing the value of the GlobalAdaptive option MaxErrorIncreases might \
+lead to a convergent numerical integration. NIntegrate obtained \
+\\!\\(\\*RowBox[{\\\"-\\\", \\\"0.004251039900208525`\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"4.3386614250866025`*^-9\\\"}]\\) for the integral and \
+error estimates.\"", 2, 221, 204, 33295390584460554967, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.941542504516851*^9},
+ CellLabel->
+  "During evaluation of \
+In[221]:=",ExpressionUUID->"38777734-8317-4a49-81c0-f3b54a2b04a9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"NIntegrate\\\", \
+\\\"::\\\", \\\"eincr\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"", 2, 221, 205, 33295390584460554967, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9415425045533667`*^9},
+ CellLabel->
+  "During evaluation of \
+In[221]:=",ExpressionUUID->"d1cb6031-419b-498d-88ef-926a8f530499"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0.02`", ",", "0.3365999999901663`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.04`", ",", "0.339733333332741`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.06`", ",", "0.34273333333894895`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.08`", ",", "0.34559999961656473`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.1`", ",", "0.34833333335949873`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.12000000000000001`", ",", "0.35093333336228155`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.13999999999999999`", ",", "0.35340000003229316`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.16`", ",", "0.3557333333789813`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.18`", ",", "0.35793333337558875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.19999999999999998`", ",", "0.360000000047543`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.22`", ",", "0.36193333338688854`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.24`", ",", "0.36373333333584423`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.26`", ",", "0.3654000000139341`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.28`", ",", "0.3669333333167905`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.30000000000000004`", ",", "0.3683333333426718`"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"0.32`", ",", "0.3696000001639083`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.34`", ",", "0.3707333333851106`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.36000000000000004`", ",", "0.37173333334191067`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.38`", ",", "0.3725999999987205`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.4`", ",", "0.37333333335620333`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.42000000000000004`", ",", "0.373933333316136`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.44`", ",", "0.3744000001696489`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.46`", ",", "0.3747333332546164`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.48000000000000004`", ",", "0.3749333333565594`"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"0.5`", ",", "0.374999999958572`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.52`", ",", "0.37493333331995177`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.54`", ",", "0.37473333331287817`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.56`", ",", "0.3743999999629876`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.5800000000000001`", ",", "0.37393333337955886`"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"0.6`", ",", "0.37333333334935387`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.62`", ",", "0.3726000001582496`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.64`", ",", "0.371733333384626`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.66`", ",", "0.3707333333616738`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.68`", ",", "0.3696000000509991`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.7000000000000001`", ",", "0.3683333333705632`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.7200000000000001`", ",", "0.3669333334334879`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.74`", ",", "0.36539999999968725`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.76`", ",", "0.3637333333451916`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.78`", ",", "0.36193333343981743`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.8`", ",", "0.3600000000026278`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.8200000000000001`", ",", "0.3579333333426325`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.8400000000000001`", ",", "0.35573333335886315`"}], "}"}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"0.86`", ",", "0.3534000000089721`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.88`", ",", "0.3509333333377256`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.9`", ",", "0.3483333333308781`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.92`", ",", "0.3456000000013327`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.9400000000000001`", ",", "0.3427333333378651`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.9600000000000001`", ",", "0.3397333333362583`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.98`", ",", "0.3366000000063305`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.941545418726883*^9},
+ CellLabel->
+  "Out[221]=",ExpressionUUID->"539d5a45-b06a-4834-8197-b068385d5ba9"]
+}, Open  ]]
+},
+WindowSize->{808, 870},
+WindowMargins->{{Automatic, 421}, {Automatic, 0}},
+FrontEndVersion->"14.0 for Mac OS X ARM (64-bit) (December 12, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"78a5f34a-bdd4-4bc7-afe1-6914832fc1a3"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 72335, 1819, 3147, "Input",ExpressionUUID->"dfcbe53a-0ac5-430c-90db-16a3efd28645"],
+Cell[72918, 1843, 315, 8, 28, "Message",ExpressionUUID->"5a623cbb-4512-4812-8dca-fc2765fe3f2d"],
+Cell[73236, 1853, 317, 8, 28, "Message",ExpressionUUID->"f9aa8f3f-2d2e-4819-8db7-5d2f4fc71148"],
+Cell[73556, 1863, 315, 8, 28, "Message",ExpressionUUID->"a8b46ff1-311b-43d1-a29e-9735a525e291"],
+Cell[73874, 1873, 461, 10, 28, "Message",ExpressionUUID->"bdfd5cb3-8a68-498a-a12d-1aaeeb7f0dda"],
+Cell[74338, 1885, 1048, 18, 115, "Message",ExpressionUUID->"b4fb210d-30d5-4f5e-b3b7-c027be2913d6"],
+Cell[75389, 1905, 1035, 18, 115, "Message",ExpressionUUID->"bb307d54-f999-437a-b791-9ef224c915e9"],
+Cell[76427, 1925, 1047, 18, 115, "Message",ExpressionUUID->"38777734-8317-4a49-81c0-f3b54a2b04a9"],
+Cell[77477, 1945, 461, 10, 28, "Message",ExpressionUUID->"d1cb6031-419b-498d-88ef-926a8f530499"],
+Cell[77941, 1957, 4372, 107, 224, "Output",ExpressionUUID->"539d5a45-b06a-4834-8197-b068385d5ba9"]
+}, Open  ]]
+}
+]
+*)
+
